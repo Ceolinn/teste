@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/.css/sidebar.css">
+    <link rel="stylesheet" href="assets/.css/furniture.css">
+    <link rel="stylesheet" href="assets/.css/body.css">
+    <link rel="stylesheet" href="assets/.css/img.css">
+    <link rel="stylesheet" href="assets/.css/section.css">
+    <link rel="stylesheet" href="assets/.css/dialog.css"> <!-- Adicione um arquivo CSS para a caixa de diálogo -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Home</title>
+</head>
+    <style>
+        #avatar {
+    width: 147px;
+    height: 147px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    position: fixed;
+    right: 40px;
+    top: 300px;
+    cursor: pointer;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#avatar img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid black;
+    position: fixed;
+    right: 80px;
+    top: 450px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#arrow:hover {
+    border-top: 15px solid white;
+}
+
+#avatarOptions {
+    display: grid;
+    position: absolute;
+    right: 30px;
+    top: 465px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+}
+
+.avatarOption {
+   margin-bottom: 5px;
+   cursor: pointer;
+}
+
+.avatarOption:hover {
+   background-color: #f0f0f0;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Arial';
+   
+}
+
+select {
+            border-radius: 5px;
+            height: 30px;
+        }
+
+        .dialog {
+            display: grid;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .dialog div {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        #logoImage {
+            align: right;
+            position: absolute;
+            top: 50%;
+            left: 230%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content {
+    margin-left: 250px;
+    padding: 16px;
+	
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 16px;}
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  width: 90px;
+  height: 40px;
+  background-color: #e7ecee;
+}
+
+button:hover {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.container {
+  position: absolute;
+  top: 7%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  }
+
+  img {
+  align: right;
+  position: absolute;
+  top: 50%;
+  left: 230%;
+  transform: translate(-50%, -50%);
+}
+
+.sobre {
+  text-align: center;
+  font-size: 20px;
+	 
+	 }
+	 
+.papel {
+  margin: 0;
+}
+
+#papel {
+  height: 600px;
+  width: 800px;
+  margin:20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 5%);
+}
+
+section {
+  position: absolute;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    background-color: #111;
+    padding-top: 20px;
+    font-family: 'Arial';
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.copyright {
+    color: #818181;
+    font-size: 13px;
+    text-align: center;
+    top: 67%;
+	left: 20%;
+	transform: translate(0%, 5000%);
+}
+    </style>
+<body>
+    <div class="sidebar">
+        <a href="#home">Início</a>
+        <a href="Sobre.html">Sobre</a>
+        <a href="Perfil.html">Perfil</a>
+        <p class="copyright">© 2024 NexusEducation</p>
+    </div>
+
+    <div class="content">
+        <h2>Seja Bem Vindo, User!</h2>
+        <div class="container">
+            <img src="C:\Users\966187\Desktop\Nova pasta\Logo.png" class="aligned-image">
+            <input type="text" id="searchInput" placeholder="Pesquisa">
+            <button type="submit" onclick="search()">Buscar</button>
+        </div>
+
+        <div class="centered">
+            <button type="button" onclick="openPostDialog()">Novo Post</button>
+        </div>
+
+        <section id="postsSection">
+        <br><br><br><br><br><br></br>
+            <strong>Usuário1</strong>
+            <p>Descrição do Post 1.</p>
+            <a href="#" onclick="downloadFile('arquivo1.txt')">arquivo1.txt</a>
+            <hr>
+            <strong>Usuário2</strong>
+            <p>Descrição do Post 2.</p>
+            <a href="#" onclick="downloadFile('arquivo2.txt')">arquivo2.txt</a>
+            <hr>
+        </section>
+    </div>
+
+    <div id="postDialog" class="dialog">
+        <span onclick="closePostDialog()" class="close">&times;</span>
+        <h2>Novo Post</h2>
+        <div>
+            <label for="nomePost">Seu Nome:</label>
+            <input type="text" id="nomePost">
+        </div>
+        <div>
+            <label for="descricaoPost">Descrição:</label>
+            <textarea id="descricaoPost"></textarea>
+        </div>
+        <div>
+            <label for="uploadFile">Upload de Arquivo:</label>
+            <input type="file" id="uploadFile">
+        </div>
+        <button onclick="submitPost()">Publicar</button>
+    </div>
+
+    <style>
+        .centered {
+            text-align: center;
+            margin-top: 90px; /* Ajuste conforme necessário */
+        }
+        hr {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            width: 1600px; /* Ajustado para ocupar 100% da largura do contêiner */
+        }
+    </style>
+
+    <script>
+        function search() {
+            // Adicione a lógica de busca aqui
+        }
+
+        function openPostDialog() {
+            document.getElementById("postDialog").style.display = "block";
+        }
+
+        function closePostDialog() {
+            document.getElementById("postDialog").style.display = "none";
+        }
+
+        function submitPost() {
+            // Adicione a lógica para processar e exibir o novo post
+            const nome = document.getElementById("nomePost").value;
+            const descricao = document.getElementById("descricaoPost").value;
+            const fileInput = document.getElementById("uploadFile");
+            const file = fileInput.files[0];
+
+            const postsSection = document.getElementById("postsSection");
+            const postElement = document.createElement("div");
+            postElement.innerHTML = `
+                <div>
+                    <strong>${nome}</strong>
+                    <p>${descricao}</p>
+                    <a href="#" onclick="downloadFile('${file.name}')">${file.name}</a>
+                    <hr>
+                </div>
+            `;
+            postsSection.appendChild(postElement);
+
+            // Fechar a caixa de diálogo
+            closePostDialog();
+        }
+
+        function downloadFile(fileName) {
+            // Simule o download, você pode adicionar a lógica real do download aqui
+            alert(`Simulando download do arquivo: ${fileName}`);
+        }
+    </script>
+</body>
+</html>
